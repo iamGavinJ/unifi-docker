@@ -41,6 +41,7 @@ services:
       - controller
     command: bash -c 'tail -F /unifi/log/*.log'
     restart: always
+    network_mode: "none"
     volumes:
       - log:/unifi/log
 
